@@ -29,7 +29,7 @@ class IP:
             if proto == IPPROTO_TCP and self.callback:
                 self.callback(src_addr, dst_addr, payload)
         else:
-            # Atua como roteador
+            # Atua como roteador :
             self.proximidade = -1
             proximo_salto = self._next_hop(dst_addr)
             
